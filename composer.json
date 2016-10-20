@@ -1,0 +1,17 @@
+{
+    "name": "box4b/systembundle",
+    "license": "Private",
+    "type": "symfony-bundle",
+    "description": "The System Wrapper Bundle",
+    "autoload": {
+        "psr-0": {
+            "Technical\\SystemBundle": ""
+        }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.*",
+        "doctrine/orm": "~2.2,>=2.2.3",
+        "doctrine/doctrine-bundle": "~1.2",
+    },
+    "target-dir": "box4b/SystemBundle"

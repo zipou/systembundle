@@ -1,0 +1,36 @@
+
+zipou_system_general:
+    path:    /general
+    defaults: { _controller: zipouSystemBundle:View:general}
+
+zipou_system_general_reboot:
+    path:    /reboot
+    defaults: { _controller: zipouSystemBundle:View:reboot}
+
+zipou_system_general_update:
+    path:    /update
+    defaults: { _controller: zipouSystemBundle:View:update}
+
+zipou_system_general_reboot_wait:
+    path:    /reboot/wait
+    defaults: { _controller: zipouSystemBundle:View:rebootWait}    
+
+zipou_system_general_poweroff:
+    path:    /poweroff
+    defaults: { _controller: zipouSystemBundle:View:poweroff}    
+
+zipou_system_general_poweroff_wait:
+    path:    /poweroff/wait
+    defaults: { _controller: zipouSystemBundle:View:poweroffWait}       
+
+zipou_system_general_export:
+    path:    /general/export
+    defaults: { _controller: zipouSystemBundle:View:generalExport}
+
+zipou_system_general_import:
+    path:    /general/import
+    defaults: { _controller: zipouSystemBundle:View:generalImport}
+
+zipou_system_general_logs:
+    path:    /general/logs
+    defaults: { _controller: zipouSystemBundle:View:generalLogs}

@@ -1,0 +1,18 @@
+services:
+    zipou_system.initservice:
+        class: Technical\SystemBundle\Services\InitService
+        arguments: [@logger, @event_dispatcher]
+
+    zipou_system.cronservice:
+        class: Technical\SystemBundle\Services\CronService
+        arguments: [@logger, @event_dispatcher]
+
+    zipou_system.threadservice:
+        class: Technical\SystemBundle\Services\ThreadService
+        arguments: [@logger, @doctrine, %kernel.root_dir%]
+        tags:
+            - { name: kernel.event_subscriber }         
+            
+    zipou.memcacheservice:
+        class: Technical\SystemBundle\Services\MemcacheService
+        arguments: []
