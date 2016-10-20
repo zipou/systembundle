@@ -1,13 +1,13 @@
 <?php
 
-namespace Technical\SystemBundle\Entity;
+namespace box4b\SystemBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
  */
-class SymfonyThread extends \Technical\SystemBundle\Entity\Thread {
+class SymfonyThread extends \box4b\SystemBundle\Entity\Thread {
 
     private $arguments = null;
     private $root;

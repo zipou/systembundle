@@ -1,6 +1,6 @@
 <?php
 
-namespace Technical\SystemBundle\Event;
+namespace box4b\SystemBundle\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 

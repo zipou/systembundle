@@ -1,6 +1,6 @@
 <?php
 
-namespace Technical\SystemBundle\Services;
+namespace box4b\SystemBundle\Services;
 
 class CronService {
 
@@ -26,21 +26,21 @@ class CronService {
         $minute = $this->launchedTime->format("i");
         $day = $this->launchedTime->format("w");
 
-        $event = new \Technical\SystemBundle\Event\CronEvent();
+        $event = new \box4b\SystemBundle\Event\CronEvent();
 
         if (true) {
             //Launch EveryMinute Job
-            $this->eventListener->dispatch(\Technical\SystemBundle\Event\CronEvent::EVERY_MINUTE, $event);
+            $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_MINUTE, $event);
         }
 
         if (($minute % 5) == 0) {
             //Launch EveryFive Minute Job
-            $this->eventListener->dispatch(\Technical\SystemBundle\Event\CronEvent::EVERY_FIVE_MINUTES, $event);
+            $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_FIVE_MINUTES, $event);
         }
 
         if ($minute == self::MINUTE) {
             //Launch EveryHour Job
-            $this->eventListener->dispatch(\Technical\SystemBundle\Event\CronEvent::EVERY_HOUR, $event);
+            $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_HOUR, $event);
         }
         if ($minute == self::MINUTE && $hour == self::HOUR) {
             //Launch EveryDay Jobs
@@ -48,14 +48,14 @@ class CronService {
         }
         if ($minute == self::MINUTE && $hour == self::HOUR && $day == self::DAY) {
             //Launch Weekly Jobs
-            $this->eventListener->dispatch(\Technical\SystemBundle\Event\CronEvent::EVERY_WEEK, $event);
+            $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_WEEK, $event);
         }
     }
 
     public function runDaily() {
         //Launch EveryDay Jobs
-        $event = new \Technical\SystemBundle\Event\CronEvent();
-        $this->eventListener->dispatch(\Technical\SystemBundle\Event\CronEvent::EVERY_DAY, $event);
+        $event = new \box4b\SystemBundle\Event\CronEvent();
+        $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_DAY, $event);
     }
 
 }

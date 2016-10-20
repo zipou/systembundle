@@ -1,6 +1,6 @@
 <?php
 
-namespace Technical\SystemBundle\Command;
+namespace box4b\SystemBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
@@ -11,7 +11,7 @@ class InitCommand extends ContainerAwareCommand {
 
     protected function configure() {
         $this
-                ->setName('system:init')
+                ->setName('box4b:init')
                 ->setDescription('Init')
                 ->addArgument('status', InputArgument::REQUIRED, '')
         ;

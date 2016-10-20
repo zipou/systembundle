@@ -1,6 +1,6 @@
 <?php
 
-namespace Technical\SystemBundle\Entity;
+namespace box4b\SystemBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\InheritanceType("JOINED")
  * @ORM\DiscriminatorColumn(name="type", type="string")
- * @ORM\DiscriminatorMap({"symfony" = "Technical\SystemBundle\Entity\SymfonyThread", "thread" = "Technical\SystemBundle\Entity\Thread"})* 
+ * @ORM\DiscriminatorMap({"symfony" = "box4b\SystemBundle\Entity\SymfonyThread", "thread" = "box4b\SystemBundle\Entity\Thread"})* 
  */
 class Thread {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Technical\SystemBundle\Command;
+namespace box4b\SystemBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
@@ -10,7 +10,7 @@ class CronDayCommand extends ContainerAwareCommand {
 
     protected function configure() {
         $this
-                ->setName('cron:launch-daily')
+                ->setName('box4b:cron-daily')
                 ->setDescription('Every Day Cron')
         ;
     }

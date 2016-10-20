@@ -1,6 +1,6 @@
 <?php
 
-namespace Technical\SystemBundle;
+namespace box4b\SystemBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

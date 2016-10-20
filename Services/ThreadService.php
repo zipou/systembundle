@@ -1,6 +1,6 @@
 <?php
 
-namespace Technical\SystemBundle\Services;
+namespace box4b\SystemBundle\Services;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
@@ -18,12 +18,12 @@ class ThreadService implements EventSubscriberInterface {
 
     static public function getSubscribedEvents() {
         return array(
-            // \Technical\SystemBundle\Event\CronEvent::EVERY_MINUTE => array('updateStatus', 0)
+            // \box4b\SystemBundle\Event\CronEvent::EVERY_MINUTE => array('updateStatus', 0)
         );
     }
 
-    public function runThread(\Technical\SystemBundle\Entity\Thread $thread) {
-        if ($thread instanceof \Technical\SystemBundle\Entity\SymfonyThread) {
+    public function runThread(\box4b\SystemBundle\Entity\Thread $thread) {
+        if ($thread instanceof \box4b\SystemBundle\Entity\SymfonyThread) {
             $thread->setRoot($this->root_dir);
         }
         if ($thread->getRespawn()) {
@@ -47,7 +47,7 @@ class ThreadService implements EventSubscriberInterface {
         $this->logger->debug("Stop Running thread with command " . $command);
     }
 
-    public function updateStatus(\Technical\SystemBundle\Event\CronEvent $event) {
+    public function updateStatus(\box4b\SystemBundle\Event\CronEvent $event) {
 //        $this->logger->debug("Updating Status of Thread");
         $em = $this->doctrine->getManager();
         $repo = $em->getRepository("SystemBundle:Thread");

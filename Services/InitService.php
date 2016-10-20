@@ -1,8 +1,8 @@
 <?php
 
-namespace Technical\SystemBundle\Services;
+namespace box4b\SystemBundle\Services;
 
-use Technical\SystemBundle\Event\InitEvent;
+use box4b\SystemBundle\Event\InitEvent;
 
 class InitService {
 

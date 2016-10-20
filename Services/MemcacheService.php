@@ -1,6 +1,6 @@
 <?php
 
-namespace Technical\SystemBundle\Services;
+namespace box4b\SystemBundle\Services;
 
 class MemcacheService {
 

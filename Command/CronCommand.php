@@ -1,6 +1,6 @@
 <?php
 
-namespace Technical\SystemBundle\Command;
+namespace box4b\SystemBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputInterface;
@@ -10,7 +10,7 @@ class CronCommand extends ContainerAwareCommand {
 
     protected function configure() {
         $this
-                ->setName('cron:launch')
+                ->setName('box4b:cron')
                 ->setDescription('Every Minute Cron')
         ;
     }

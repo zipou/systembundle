@@ -5,7 +5,7 @@
     "description": "The System Wrapper Bundle",
     "autoload": {
         "psr-0": {
-            "Technical\\SystemBundle": ""
+            "box4b\\SystemBundle": ""
         }
     },
     "require": {
