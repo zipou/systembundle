@@ -38,6 +38,16 @@ class CronService {
             $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_FIVE_MINUTES, $event);
         }
 
+        if (($minute % 15) == 0) {
+            //Launch EVERY_FIFTEEN_MINUTES Job
+            $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_FIFTEEN_MINUTES, $event);
+        }
+
+        if (($minute % 30) == 0) {
+            //Launch EVERY_HALF_HOUR Job
+            $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_HALF_HOUR, $event);
+        }
+
         if ($minute == self::MINUTE) {
             //Launch EveryHour Job
             $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_HOUR, $event);
