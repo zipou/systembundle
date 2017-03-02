@@ -1,6 +1,6 @@
 {
     "name": "box4b/systembundle",
-    "license": "Private",
+    "license": "ISC",
     "type": "symfony-bundle",
     "description": "The System Wrapper Bundle",
     "autoload": {

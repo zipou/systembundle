@@ -7,6 +7,10 @@ services:
         class: box4b\SystemBundle\Services\CronService
         arguments: ["@logger", "@event_dispatcher"]
 
+    zipou_system.statsservice:
+        class: box4b\SystemBundle\Services\StatsService
+        arguments: ["@logger", "%kernel.environment%"]
+
     zipou_system.threadservice:
         class: box4b\SystemBundle\Services\ThreadService
         arguments: ["@logger", "@doctrine", "%kernel.root_dir%"]
