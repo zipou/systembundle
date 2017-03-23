@@ -17,7 +17,7 @@ class CronHourlyCommand extends ContainerAwareCommand {
 
     protected function execute(InputInterface $input, OutputInterface $output) {
         $service = $this->getContainer()->get('zipou_system.cronservice');
-        $service->run();
+        $service->runHourly();
     }
 
 }

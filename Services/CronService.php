@@ -50,7 +50,7 @@ class CronService {
 
         if ($minute == self::MINUTE) {
             //Launch EveryHour Job
-            $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_HOUR, $event);
+            $this->runHourly();
         }
 
         if ($minute == self::MINUTE && $hour == self::HOUR) {
@@ -71,9 +71,8 @@ class CronService {
     }
 
     public function runHourly() {
-        $event = new \box4b\SystemBundle\Event\CronEvent();      
+        $event = new \box4b\SystemBundle\Event\CronEvent();
         $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_HOUR, $event);
-
     }
 
 }
