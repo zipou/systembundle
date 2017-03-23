@@ -52,10 +52,12 @@ class CronService {
             //Launch EveryHour Job
             $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_HOUR, $event);
         }
+
         if ($minute == self::MINUTE && $hour == self::HOUR) {
             //Launch EveryDay Jobs
             $this->runDaily();
         }
+
         if ($minute == self::MINUTE && $hour == self::HOUR && $day == self::DAY) {
             //Launch Weekly Jobs
             $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_WEEK, $event);
@@ -66,6 +68,12 @@ class CronService {
         //Launch EveryDay Jobs
         $event = new \box4b\SystemBundle\Event\CronEvent();
         $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_DAY, $event);
+    }
+
+    public function runHourly() {
+        $event = new \box4b\SystemBundle\Event\CronEvent();      
+        $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_HOUR, $event);
+
     }
 
 }
