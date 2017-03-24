@@ -4,7 +4,7 @@ namespace box4b\SystemBundle\Services;
 
 class CronService {
 
-    const MINUTE = "25";
+    const MINUTE = "00";
     const HOUR = "2";
     const DAY = "0";
 
