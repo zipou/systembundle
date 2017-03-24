@@ -17,11 +17,15 @@ class CronEvent extends Event {
     private $datetime;
 
     public function __construct() {
-        $this -> datetime = new \DateTime();
+        $this->datetime = new \DateTime();
     }
 
     public function getDateTime() {
-        return $this -> datetime;
+        return $this->datetime;
+    }
+
+    public function setDateTime($datetime) {
+        return $this->datetime = $datetime;
     }
 
 }
