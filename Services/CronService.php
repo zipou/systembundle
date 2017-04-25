@@ -53,6 +53,11 @@ class CronService {
             $this->runHourly();
         }
 
+        if (($minute == self::MINUTE) && ($hour % 2 == 0)) {
+            //Launch Every 2 Hours Job
+            $this->eventListener->dispatch(\box4b\SystemBundle\Event\CronEvent::EVERY_TWO_HOURS, $event);
+        }
+
         if ($minute == self::MINUTE && $hour == self::HOUR) {
             //Launch EveryDay Jobs
             $this->runDaily();

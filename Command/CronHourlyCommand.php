@@ -10,8 +10,8 @@ class CronHourlyCommand extends ContainerAwareCommand {
 
     protected function configure() {
         $this
-                ->setName('box4b:cron-hourly')
-                ->setDescription('Every Minute Cron')
+            ->setName('box4b:cron-hourly')
+            ->setDescription('Every Minute Cron')
         ;
     }
 
